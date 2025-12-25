@@ -37,8 +37,8 @@ async function getWeather(lat, lon) {
 function setWeather(data) {
 
     document.getElementById("currentWeather").innerHTML = (`
-        <h3>Current Weather</h3>
-        <h4>${data.current_weather.temperature}°C | ${data.current_weather.windspeed} km/h</h4>
+        <h1>Current Weather</h1>
+        <h2>${data.current_weather.temperature}°C | ${data.current_weather.windspeed} km/h</h2>
     `);
 
 
