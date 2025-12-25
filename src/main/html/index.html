@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F Weather</title>
+
+    <style>
+        /* PAGE BASE */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url("https://loremflickr.com/1920/1080/nature");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        #swap {
+            font-size: 1rem;
+            padding: 6px 14px;
+            background: #d9f9d9;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        #areaName, #state {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 5px 0;
+            color: #064d1e;
+        }
+
+        /* MAIN WEATHER BOXES */
+        #currentWeather,
+        #dailyWeather {
+            background: #ccffdd;
+            border-radius: 10px;
+            border: 2px solid #7cd68b;
+            padding: 16px;
+            width: 95%;
+            max-width: 900px;
+            margin: 15px auto;
+            box-sizing: border-box;
+        }
+
+        #currentWeather h2,
+        #dailyWeather h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            color: #064d1e;
+        }
+
+        /* DAILY WEATHER FLEX ROW */
+        #dailyWeather {
+            display: flex;
+            flex-wrap: wrap;                 /* responsive wrap on larger screens */
+            justify-content: space-between;  /* spread cards evenly */
+            gap: 10px;
+        }
+
+        /* EACH DAY CARD */
+        .day-card {
+            background: #baf5c8;
+            border: 1px solid #7cd68b;
+            border-radius: 8px;
+            padding: 10px;
+            min-width: 120px;
+            flex: 1;                        /* equal width on desktop */
+            text-align: center;
+            font-weight: bold;
+            color: #022b10;
+        }
+
+        /* 🌍 MOBILE RESPONSIVE (Small screens scroll horizontally) */
+        @media(max-width: 600px){
+            #dailyWeather {
+                flex-wrap: nowrap;           /* Single scroll row */
+                overflow-x: auto;
+            }
+            .day-card {
+                min-width: 140px;            /* bigger for finger scroll */
+                flex: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>F Weather</h1>
+<h3 id="swap">Loading...</h3>
+
+<h2 id="areaName">Detecting area...</h2>
+<h3 id="state">Detecting state...</h3>
+
+<!-- CURRENT WEATHER -->
+<div id="currentWeather">
+    <h2>Current Weather</h2>
+    <p>Loading...</p>
+</div>
+
+<!-- DAILY FORECAST (7+ DAYS FILLED BY JS) -->
+<div id="dailyWeather">
+    <!-- JS will insert .day-card here -->
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
