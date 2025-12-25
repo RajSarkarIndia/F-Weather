@@ -38,7 +38,7 @@ function setWeather(data) {
 
     document.getElementById("currentWeather").innerHTML = (`
         <h3>Current Weather</h3>
-        <p>${data.current_weather.temperature}°C | ${data.current_weather.windspeed} km/h</p>
+        <h4>${data.current_weather.temperature}°C | ${data.current_weather.windspeed} km/h</h4>
     `);
 
 
