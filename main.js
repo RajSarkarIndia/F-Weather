@@ -35,10 +35,47 @@ async function getWeather(lat, lon) {
 
 
 function setWeather(data) {
+    //background image
+
+    let weathercode = data.current_weather.weathercode;
+    const weatherMeaning = {
+        0: "Sunny",
+        1: "MainlyClear",
+        2: "PartlyCloudy",
+        3: "Cloudy",
+        45: "Fog",
+        48: "FreezingFog",
+        51: "LightDrizzle",
+        53: "ModerateDrizzle",
+        55: "DenseDrizzle",
+        61: "LightRain",
+        63: "ModerateRain",
+        65: "HeavyRain",
+        66: "FreezingRain",
+        67: "FreezingRain",
+        71: "LightSnow",
+        73: "ModerateSnow",
+        75: "HeavySnow",
+        77: "SnowGrains",
+        80: "LightRainShowers",
+        81: "ModerateRainShowers",
+        82: "HeavyRainShowers",
+        85: "LightSnowShowers",
+        86: "HeavySnowShowers",
+        95: "Thunderstorm",
+        96: "Thunderstorm",
+        99: "Thunderstorm"
+    };
+
+    let weatherText = weatherMeaning[weathercode];
+    document.body.style.backgroundImage = `url('https://loremflickr.com/1920/1080/${weatherText}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
 
     document.getElementById("currentWeather").innerHTML = (`
         <h1>Current Weather</h1>
         <h2>${data.current_weather.temperature}°C | ${data.current_weather.windspeed} km/h</h2>
+        <h2>${weatherText}</h2>
     `);
 
 
@@ -53,6 +90,7 @@ function setWeather(data) {
             </div>
         `);
     }
+
 }
 
 
@@ -67,8 +105,6 @@ setInterval(() => {
     text.innerText = arr[i];
     i = (i + 1) % arr.length;
 }, 3000);
-
-
 
 
 
