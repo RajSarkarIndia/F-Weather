@@ -15,11 +15,6 @@ A simple **real-time weather web app** that detects the user's location using th
 
 ---
 
-## 📂 Project Structure
-F-Weather<br>
-├── **index.html** – contains UI + Base Structure + CSS  
-├── **main.js** – contains Weather API Logic + Rendering  
-└── **README.md** – contains Documentation
 
 
 ---
