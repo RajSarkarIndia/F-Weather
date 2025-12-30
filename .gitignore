@@ -1,0 +1,33 @@
+# IDE / Editor folders
+.idea/
+.vscode/
+*.swp
+
+# Node dependencies
+node_modules/
+
+# Build outputs (TS → JS)
+*.js
+*.js.map
+*.d.ts
+*.d.ts.map
+
+# Dist / Build folders (if generated)
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Env (just in case you add API keys later)
+.env
+.env.local
+.env.*.local
+
