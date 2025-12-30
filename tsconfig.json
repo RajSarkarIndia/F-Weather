@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    // File Layout (optional)
+    // "rootDir": "./src",
+    // "outDir": "./dist",
+
+    // Enable DOM and modern JS
+    "lib": ["es2015", "dom"],
+
+    // Browser-friendly output
+    "module": "esnext",
+    "target": "esnext",
+
+    // STRICT mode is fine
+    "strict": true,
+
+    // Remove Node types (important!)
+    "types": [],
+
+    // Output & Build Behavior
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Misc
+    "isolatedModules": true,
+    "skipLibCheck": true
+  }
+}

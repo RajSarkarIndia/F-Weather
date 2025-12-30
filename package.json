@@ -1,0 +1,23 @@
+{
+  "name": "f-weather",
+  "version": "1.0.0",
+  "description": "A simple **real-time weather web app** that detects the user's location using the browser, fetches address details from **OpenStreetMap (Nominatim)**, and retrieves live weather data + 7-day forecast from **Open-Meteo API**.",
+  "homepage": "https://github.com/RajSarkarIndia/F-Weather#readme",
+  "bugs": {
+    "url": "https://github.com/RajSarkarIndia/F-Weather/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajSarkarIndia/F-Weather.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
+}
