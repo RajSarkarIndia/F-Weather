@@ -6,7 +6,6 @@
 node_modules/
 
 # TypeScript build output
-*.js
 !main.js           # <-- DO NOT IGNORE main.js (Netlify needs it)
 *.js.map
 *.d.ts
